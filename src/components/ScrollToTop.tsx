@@ -1,18 +1,32 @@
-import { useEffect } from "react";
-import { useLocation, Outlet } from "react-router-dom";
+import { useLayoutEffect, type RefObject } from "react";
+import { useLocation } from "react-router-dom";
 
-const ScrollToTop = () => {
+type ScrollToTopProps = {
+  contentRef: RefObject<HTMLElement | null>;
+};
+
+const ScrollToTop = ({ contentRef }: ScrollToTopProps) => {
   const { pathname } = useLocation();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // The shell may own the scrolling container rather than the window.
+    let element = contentRef.current;
+    while (element) {
+      const { overflowX, overflowY } = window.getComputedStyle(element);
+      if (/(auto|scroll|overlay)/.test(`${overflowX} ${overflowY}`)) {
+        element.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      }
+      element = element.parentElement;
+    }
+
     window.scrollTo({
       top: 0,
       left: 0,
       behavior: "instant",
     });
-  }, [pathname]);
+  }, [pathname, contentRef]);
 
-  return <Outlet />;
+  return null;
 };
 
 export default ScrollToTop;

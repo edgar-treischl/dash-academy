@@ -2,15 +2,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { routes } from "./app/router";
 import "./styles/globals.css";
 
-import ScrollToTop from "./components/ScrollToTop";
-
 const router = createBrowserRouter(
-  [
-    {
-      element: <ScrollToTop />,
-      children: routes,
-    },
-  ],
+  routes,
   {
     basename: import.meta.env.BASE_URL,
   }
