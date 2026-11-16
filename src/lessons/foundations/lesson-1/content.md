@@ -1,0 +1,62 @@
+## Die zunehmende Bedeutung von Daten
+
+> Daten spielen im Bildungsbereich eine immer wichtigere Rolle. 
+
+Im schulischen Alltag entstehen täglich zahlreiche Informationen: beispielsweise über die Leistungen von Schülerinnen und Schülern, Anwesenheiten oder die Ergebnisse von Befragungen. Gleichzeitig werden immer mehr digitale Systeme eingesetzt, die Daten erfassen, speichern und aufbereiten. Dadurch stehen Schulen zunehmend Informationen zur Verfügung, die dabei helfen können, Entwicklungen besser zu verstehen und Entscheidungen datenbasiert zu treffen.
+
+
+---
+
+Das folgende Diagram zeigt, wie eine interaktive React-Komponente aus DASH direkt in eine Lektion eingebettet wird. Die Werte sind fiktiv.
+
+::: component SalesChart
+{
+  "title": "Beispiel: Fiktive Zahlen nach Schulart",
+  "data": [
+    { "sart": "GS", "sus": 12000 },
+    { "sart": "MS", "sus": 15000 },
+    { "sart": "RS", "sus": 18000 },
+    { "sart": "GY", "sus": 28000 }
+  ]
+}
+:::
+
+---
+
+Die Fähigkeit im Umgang mit Daten - Data Literacy - , wird damit zu einer wichtigen Kompetenz für alle, die im Schulsystem arbeiten. Data Literacy bedeutet nicht, dass jede Lehrkraft umfangreiche statistische Kenntnisse besitzen oder komplexe Datenanalysen durchführen muss. Vielmehr geht es darum, grundlegende Daten zu verstehen, Informationen richtig einzuordnen und daraus sinnvolle Erkenntnisse für die eigene Arbeit abzuleiten.
+
+## Wo begegnen uns Daten im Schulsystem?
+
+Daten begegnen uns in nahezu allen Bereichen des schulischen Alltags – häufig, ohne dass wir sie bewusst als solche wahrnehmen. Im Unterricht entstehen beispielsweise Informationen über Lernfortschritte, Testergebnisse, Aufgabenbearbeitungen oder die Beteiligung von Schülerinnen und Schülern. Weitere Daten finden sich in Anwesenheitslisten, Zeugnissen, Befragungen, Förderplänen oder schulischen Statistiken.
+
+Auch außerhalb des direkten Unterrichts spielen Daten eine wichtige Rolle. Schulleitungen nutzen beispielsweise Informationen zur Schulentwicklung, zur Personalplanung oder zur Organisation des Schulbetriebs. Schulverwaltungen und weitere Akteure im Bildungssystem arbeiten mit Daten, um Entwicklungen zu beobachten, Ressourcen zu planen und Entscheidungen vorzubereiten.
+
+Ein grundlegendes Verständnis von Daten hilft dabei, diese unterschiedlichen Informationen besser zu erkennen und ihren Nutzen für die eigene Tätigkeit zu verstehen.
+
+## Beispiele: Schülerleistungen, Anwesenheit, Lernstandserhebungen und Schulentwicklung
+
+Ein Beispiel für den Einsatz von Daten ist die Beobachtung von Schülerleistungen. Testergebnisse, Klassenarbeiten oder Lernstandserhebungen liefern Informationen darüber, welche Kompetenzen bereits vorhanden sind und in welchen Bereichen möglicherweise weiterer Unterstützungsbedarf besteht. Werden solche Informationen über einen längeren Zeitraum betrachtet, können auch Lernentwicklungen sichtbar werden.
+
+Ein weiteres Beispiel ist die Anwesenheit von Schülerinnen und Schülern. Anwesenheitsdaten können dabei helfen, Fehlzeiten zu erkennen und mögliche Auffälligkeiten frühzeitig wahrzunehmen. Auch Ergebnisse von Schüler- und Elternbefragungen liefern wertvolle Informationen über die Wahrnehmung des Schulalltags und können Hinweise auf Verbesserungsmöglichkeiten geben.
+
+Auf Ebene der gesamten Schule können Daten beispielsweise für die Schulentwicklung genutzt werden. Informationen über Lernergebnisse, Unterrichtsqualität, Schulklima oder die Teilnahme an Förderangeboten können als Grundlage dienen, um bestehende Maßnahmen zu reflektieren und neue Entwicklungsschwerpunkte zu setzen.
+
+Diese Beispiele zeigen, dass Daten nicht nur abstrakte Zahlen und Tabellen sind. Sie beschreiben konkrete Situationen und Entwicklungen, die für die tägliche Arbeit im Schulsystem relevant sind.
+
+## Wie können Daten Unterricht, Lernen und Entscheidungsprozesse unterstützen?
+
+Daten können Lehrkräfte dabei unterstützen, Lernprozesse besser zu verstehen und den Unterricht gezielter zu gestalten. Wenn beispielsweise die Ergebnisse einer Lernstandserhebung zeigen, dass mehrere Schülerinnen und Schüler Schwierigkeiten mit einem bestimmten Thema haben, kann dies ein Anlass sein, Inhalte erneut aufzugreifen oder zusätzliche Lernangebote zu schaffen. Daten liefern damit eine zusätzliche Informationsgrundlage für pädagogische Überlegungen und Entscheidungen. Dabei ersetzen Daten nicht die pädagogische Beobachtung oder die persönliche Einschätzung der Lehrkraft, sondern ergänzen diese um weitere Perspektiven.
+
+Auf Ebene der Schulleitung und Schulorganisation können Daten zur Unterstützung von Entscheidungen beitragen. Beispielsweise können Informationen über Schülerzahlen, Anwesenheiten oder die Nutzung von Förderangeboten dabei helfen, Ressourcen zu planen und schulische Maßnahmen gezielter auszurichten.
+
+Entscheidend ist, Daten nicht isoliert zu betrachten, sondern sie im jeweiligen pädagogischen und organisatorischen Kontext zu verstehen. Ihr Wert entsteht insbesondere dann, wenn die gewonnenen Informationen mit fachlicher Erfahrung verbunden und für konkrete Fragestellungen genutzt werden.
+
+## Von intuitiven zu dateninformierten Entscheidungen
+
+Im schulischen Alltag werden viele Entscheidungen auf Grundlage von Erfahrung, Beobachtungen und pädagogischem Fachwissen getroffen. Diese Faktoren bleiben auch weiterhin unverzichtbar. Gleichzeitig können Daten dabei helfen, persönliche Eindrücke durch zusätzliche Informationen zu ergänzen und Entscheidungen auf eine breitere Grundlage zu stellen.
+
+Ein Beispiel: Eine Lehrkraft hat den Eindruck, dass die Leistungen einer Klasse in einem bestimmten Fachbereich zurückgegangen sind. Durch einen Blick auf Testergebnisse, frühere Leistungsstände oder andere verfügbare Informationen lässt sich einschätzen, ob sich tatsächlich eine Entwicklung erkennen lässt und welche Bereiche besonders betroffen sind.
+
+Dateninformierte Entscheidungen bedeuten nicht, Entscheidungen ausschließlich auf Basis von Zahlen zu treffen. Vielmehr werden Daten als zusätzliche Informationsquelle genutzt, um Situationen besser einzuschätzen, Fragen gezielter zu stellen und mögliche Maßnahmen abzuwägen.
+
+**Data Literacy hilft dabei, die Verbindung zwischen Daten, pädagogischer Erfahrung und professionellem Handeln herzustellen.** Ziel ist es, Informationen bewusst und sinnvoll in die eigene Arbeit einzubeziehen.

@@ -1,0 +1,19 @@
+## 🎯 Quick Fix Checklist
+
+### Phase 1 - Do This First (23 min)
+- [ ] Add link styling (color, underline, focus)
+- [ ] Fix code block contrast (dark bg)
+- [ ] Clean blockquote CSS
+- [ ] Add section breaks (hr, h2/h3 top borders)
+- ✅ **Deploy & gather feedback**
+
+### Phase 2 - Next Sprint (30 min)
+- [ ] Table row striping & headers
+- [ ] Bold/italic emphasis
+- [ ] Image caption support
+- [ ] Nested list spacing
+
+### Phase 3 - Roadmap (55 min)
+- [ ] Syntax highlighting (highlight.js)
+- [ ] Heading anchors for deep linking
+- [ ] Semantic callout types
