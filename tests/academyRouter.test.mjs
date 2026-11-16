@@ -36,6 +36,19 @@ test("keeps landing tokens and learning components scoped to the Academy", async
   assert.doesNotMatch(globalStyles, /@layer\b/);
 });
 
+test("isolates retention styles from the original retention MFE", async () => {
+  const { default: RetentionPage } = await server.ssrLoadModule("/src/pages/RetentionPage.tsx");
+  const styles = await readFile(new URL("../src/styles/retention.css", import.meta.url), "utf8");
+  const stream = await renderToReadableStream(createElement(RetentionPage));
+  await stream.allReady;
+  const html = await new Response(stream).text();
+
+  assert.match(html, /class="mfe-academy-retention mfe-academy-retention__page-wrapper"/);
+  assert.match(styles, /\.mfe-academy-retention__explorer-layout\s*\{/);
+  assert.doesNotMatch(html, /class-retention-mfe/);
+  assert.doesNotMatch(styles, /class-retention-mfe/);
+});
+
 test("supports internal navigation with the shared Academy routes", async () => {
   const { routes } = await server.ssrLoadModule("/src/app/router.tsx");
   const router = createMemoryRouter(routes);

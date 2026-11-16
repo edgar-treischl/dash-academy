@@ -93,22 +93,22 @@ function RetentionPageComponent() {
   }));
 
   return (
-    <div className="class-retention-mfe class-retention-mfe__page-wrapper">
+    <div className="mfe-academy-retention mfe-academy-retention__page-wrapper">
       {/* Page Header */}
-      <header className="class-retention-mfe__page-header">
+      <header className="mfe-academy-retention__page-header">
         <div
-          className="class-retention-mfe__page-header-content class-retention-mfe__page-header-content--with-actions"
+          className="mfe-academy-retention__page-header-content mfe-academy-retention__page-header-content--with-actions"
           data-tour="retention-header"
         >
-          <div>
-            <h1 className="class-retention-mfe__page-title">Klassenwiederholungs App</h1>
-            <p className="class-retention-mfe__page-description">
+          <div className="mfe-academy-retention__page-heading">
+            <h1 className="mfe-academy-retention__page-title">Klassenwiederholungs App</h1>
+            <p className="mfe-academy-retention__page-description">
               Analyse der Schülerwiederholungen nach Schulart und Schuljahr
             </p>
           </div>
           <button
             type="button"
-            className="class-retention-mfe__tour-button"
+            className="mfe-academy-retention__tour-button"
             onClick={startTour}
           >
             <HelpCircle size={16} aria-hidden="true" />
@@ -118,23 +118,23 @@ function RetentionPageComponent() {
       </header>
 
       {/* Main Content */}
-      <div className="class-retention-mfe__page-content">
+      <div className="mfe-academy-retention__page-content">
         {/* Main explorer layout */}
-        <section className="class-retention-mfe__explorer-layout">
+        <section className="mfe-academy-retention__explorer-layout">
           {/* Left column: Chart */}
-          <div className="class-retention-mfe__explorer-left">
-            <div className="class-retention-mfe__chart-card">
-              <div className="class-retention-mfe__card-heading" />
+          <div className="mfe-academy-retention__explorer-left">
+            <div className="mfe-academy-retention__chart-card">
+              <div className="mfe-academy-retention__card-heading" />
 
               {/* Controls section */}
-              <div className="class-retention-mfe__controls-section">
+              <div className="mfe-academy-retention__controls-section">
                 <div
-                  className="class-retention-mfe__control-group"
+                  className="mfe-academy-retention__control-group"
                   data-tour="retention-year-select"
                 >
                   <label
                     htmlFor="year-select"
-                    className="class-retention-mfe__control-label"
+                    className="mfe-academy-retention__control-label"
                   >
                     <span>Schuljahr wählen:</span>
                   </label>
@@ -144,7 +144,7 @@ function RetentionPageComponent() {
                     onChange={(e) =>
                       setSelectedYear(e.target.value as SchoolYear)
                     }
-                    className="class-retention-mfe__control-select"
+                    className="mfe-academy-retention__control-select"
                   >
                     <option value="2022/23">2022/23</option>
                     <option value="2023/24">2023/24</option>
@@ -155,7 +155,7 @@ function RetentionPageComponent() {
 
               {/* Chart frame */}
               <div
-                className="class-retention-mfe__chart-frame"
+                className="mfe-academy-retention__chart-frame"
                 data-tour="retention-chart"
               >
                 <BarPlot data={yearData} year={selectedYear} />
@@ -163,15 +163,15 @@ function RetentionPageComponent() {
 
               {/* Legend */}
               <div
-                className="class-retention-mfe__chart-legend"
+                className="mfe-academy-retention__chart-legend"
                 data-tour="retention-legend"
               >
-                <div className="class-retention-mfe__legend-label">Schularten</div>
-                <ul className="class-retention-mfe__legend-list">
+                <div className="mfe-academy-retention__legend-label">Schularten</div>
+                <ul className="mfe-academy-retention__legend-list">
                   {SCHOOL_TYPES.map((schoolType) => (
                     <li key={schoolType}>
                       <span
-                        className="class-retention-mfe__legend-swatch"
+                        className="mfe-academy-retention__legend-swatch"
                         style={{
                           backgroundColor: SCHOOL_TYPE_COLORS[schoolType],
                         }}
@@ -185,23 +185,23 @@ function RetentionPageComponent() {
           </div>
 
           {/* Right column: Interpretation */}
-          <div className="class-retention-mfe__explorer-right">
+          <div className="mfe-academy-retention__explorer-right">
             <div
-              className="class-retention-mfe__story-card class-retention-mfe__story-card--tall"
+              className="mfe-academy-retention__story-card mfe-academy-retention__story-card--tall"
               data-tour="retention-interpretation"
             >
-              <div className="class-retention-mfe__story-header">
-                <h3 className="class-retention-mfe__story-heading">
+              <div className="mfe-academy-retention__story-header">
+                <h3 className="mfe-academy-retention__story-heading">
                   Interpretation
                 </h3>
               </div>
 
               {/* Tab navigation */}
-              <div className="class-retention-mfe__story-tabs">
+              <div className="mfe-academy-retention__story-tabs">
                 <button
-                  className={`class-retention-mfe__story-tab ${
+                  className={`mfe-academy-retention__story-tab ${
                     activeTab === "befund"
-                      ? "class-retention-mfe__story-tab--active"
+                      ? "mfe-academy-retention__story-tab--active"
                       : ""
                   }`}
                   onClick={() => setActiveTab("befund")}
@@ -210,9 +210,9 @@ function RetentionPageComponent() {
                   Befund
                 </button>
                 <button
-                  className={`class-retention-mfe__story-tab ${
+                  className={`mfe-academy-retention__story-tab ${
                     activeTab === "hinweis"
-                      ? "class-retention-mfe__story-tab--active"
+                      ? "mfe-academy-retention__story-tab--active"
                       : ""
                   }`}
                   onClick={() => setActiveTab("hinweis")}
@@ -223,17 +223,17 @@ function RetentionPageComponent() {
               </div>
 
               {/* Tab content */}
-              <div className="class-retention-mfe__story-content">
+              <div className="mfe-academy-retention__story-content">
                 {activeTab === "befund" && (
                   <div>
-                    <p className="class-retention-mfe__story-text">
+                    <p className="mfe-academy-retention__story-text">
                       Wie unterscheiden sich Schularten nach Wiederholungsquoten?
                       Das Balkendiagramm zeigt die Anteile der Schülerinnen und
                       Schüler, die in verschiedenen Schultypen in Bayern Klassen
                       wiederholen.
                     </p>
                     <ul
-                      className="class-retention-mfe__story-text"
+                      className="mfe-academy-retention__story-text"
                       style={{ paddingLeft: "1.5rem" }}
                     >
                       <li>
@@ -269,7 +269,7 @@ function RetentionPageComponent() {
 
                 {activeTab === "hinweis" && (
                   <div>
-                    <p className="class-retention-mfe__story-text class-retention-mfe__story-text--italic">
+                    <p className="mfe-academy-retention__story-text mfe-academy-retention__story-text--italic">
                       Betroffene Kinder erleben häufiger Leistungsängste,
                       geringeres Selbstvertrauen sowie ein erhöhtes Risiko für
                       Schulabbrüche. Hohe Wiederholungsquoten können daher ein
@@ -278,11 +278,11 @@ function RetentionPageComponent() {
                       individualisierte Unterstützung und adaptive Lernangebote
                       abgefedert werden.
                     </p>
-                    <p className="class-retention-mfe__story-text">
+                    <p className="mfe-academy-retention__story-text">
                       <strong>Empfohlene Maßnahmen:</strong>
                     </p>
                     <ul
-                      className="class-retention-mfe__story-text"
+                      className="mfe-academy-retention__story-text"
                       style={{ paddingLeft: "1.5rem" }}
                     >
                       <li>
@@ -311,30 +311,30 @@ function RetentionPageComponent() {
 
         {/* Statistics section */}
         <section
-          className="class-retention-mfe__stats-section"
+          className="mfe-academy-retention__stats-section"
           data-tour="retention-trend"
         >
-          <h3 className="class-retention-mfe__stats-header">
+          <h3 className="mfe-academy-retention__stats-header">
             Trend im Vergleich zum Vorjahr
           </h3>
           <div
-            className="class-retention-mfe__stats-row"
+            className="mfe-academy-retention__stats-row"
             aria-label="Veränderungen zum Vorjahr"
           >
             {yoyChanges.map(({ type, change }) => (
               <section
                 key={type}
-                className="class-retention-mfe__stat-card"
+                className="mfe-academy-retention__stat-card"
               >
-                <span className="class-retention-mfe__stat-type">{type}</span>
+                <span className="mfe-academy-retention__stat-type">{type}</span>
                 <strong
                   className={
                     change === null
                       ? ""
                       : change > 0
-                        ? "class-retention-mfe__stat-increase"
+                        ? "mfe-academy-retention__stat-increase"
                         : change < 0
-                          ? "class-retention-mfe__stat-decrease"
+                          ? "mfe-academy-retention__stat-decrease"
                           : ""
                   }
                 >
