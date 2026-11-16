@@ -1,7 +1,5 @@
 
-import {
-  createBrowserRouter
-} from "react-router-dom";
+import type { RouteObject } from "react-router-dom";
 
 import AppLayout from "../layouts/AppLayout";
 import LandingPage from "../pages/LandingPage";
@@ -11,7 +9,7 @@ import LessonPage from "../pages/LessonPage";
 import SettingsPage from "../pages/SettingsPage";
 import RetentionPage from "../pages/RetentionPage";
 
-export const router = createBrowserRouter([
+export const routes: RouteObject[] = [
   {
     path: "/",
     element: <AppLayout />,
@@ -42,6 +40,4 @@ export const router = createBrowserRouter([
       }
     ]
   }
-], {
-  basename: import.meta.env.BASE_URL
-});
+];

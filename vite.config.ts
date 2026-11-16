@@ -12,7 +12,7 @@ export default defineConfig({
       name: 'dash-academy',
       filename: 'remoteEntry.js',
       exposes: {
-        './AcademyApp': './src/App.tsx',
+        './AcademyApp': './src/AcademyApp.tsx',
       },
 
       shared: ['react', 'react-dom']

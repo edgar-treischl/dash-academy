@@ -1,6 +1,10 @@
-import { RouterProvider } from "react-router-dom";
-import { router } from "./app/router";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { routes } from "./app/router";
 import "./styles/globals.css";
+
+const router = createBrowserRouter(routes, {
+  basename: import.meta.env.BASE_URL,
+});
 
 export default function App() {
   return <RouterProvider router={router} />;
