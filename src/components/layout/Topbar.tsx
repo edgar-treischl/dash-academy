@@ -4,21 +4,21 @@ import { NavLink } from "react-router-dom";
 
 export default function Topbar() {
   return (
-    <header className="topbar">
-      <div className="topbar-left">
+    <header className="mfe-academy-topbar">
+      <div className="mfe-academy-topbar-left">
         <NavLink
           to="/"
-          className="topbar-brand"
+          className="mfe-academy-topbar-brand"
         >
-          <span className="topbar-brand-mark">
+          <span className="mfe-academy-topbar-brand-mark">
             <BookOpen size={20} />
           </span>
           {" "}Dash Academy
         </NavLink>
       </div>
 
-      <div className="topbar-right">
-        <div className="search-box">
+      <div className="mfe-academy-topbar-right">
+        <div className="mfe-academy-search-box">
           <Search size={18} />
           <input
             type="text"
@@ -27,11 +27,11 @@ export default function Topbar() {
         </div>
 
         <button
-          className="notification-button"
+          className="mfe-academy-notification-button"
           aria-label="Notifications"
         >
           <Bell size={20} />
-          <span className="notification-dot" />
+          <span className="mfe-academy-notification-dot" />
         </button>
       </div>
     </header>

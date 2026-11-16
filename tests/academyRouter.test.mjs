@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import { after, test } from "node:test";
 import { createElement } from "react";
 import { renderToReadableStream } from "react-dom/server";
@@ -17,8 +18,22 @@ test("renders the federated entry without a browser URL or standalone basename",
   const html = await new Response(stream).text();
 
   assert.match(html, /Fortbildungsinhalte für Dash/);
+  assert.match(html, /class="learning-page mfe-academy-landing-page"/);
   assert.match(html, /href="\/learning-path"/);
   assert.doesNotMatch(html, /href="\/dash-academy\//);
+});
+
+test("keeps landing tokens and learning components scoped to the Academy", async () => {
+  const [globalStyles, landingStyles] = await Promise.all([
+    readFile(new URL("../src/styles/globals.css", import.meta.url), "utf8"),
+    readFile(new URL("../src/styles/landing.css", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(landingStyles, /\.mfe-academy \.mfe-academy-landing-page\s*\{[^}]*--landing-primary:/);
+  assert.match(globalStyles, /\.mfe-academy \.mfe-academy-feature-links-grid\s*\{[^}]*display:\s*grid/);
+  assert.match(globalStyles, /\.mfe-academy \.learning-score-card\s*\{/);
+  assert.match(globalStyles, /\.mfe-academy \.learning-markdown-content\s*\{/);
+  assert.doesNotMatch(globalStyles, /@layer\b/);
 });
 
 test("supports internal navigation with the shared Academy routes", async () => {

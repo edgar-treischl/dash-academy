@@ -14,25 +14,25 @@ const links = [
 
 export default function Sidebar() {
   return (
-    <aside className="sidebar">
+    <aside className="mfe-academy-sidebar">
       <NavLink
         to="/"
-        className="sidebar-brand"
+        className="mfe-academy-sidebar-brand"
       >
-        <span className="sidebar-brand-mark">
+        <span className="mfe-academy-sidebar-brand-mark">
           <BookOpen size={20} />
         </span>
         {" "}Dash Academy
       </NavLink>
 
-      <nav className="sidebar-nav">
+      <nav className="mfe-academy-sidebar-nav">
         {links.map(({ label, path, icon: Icon }) => (
           <NavLink
             key={label}
             to={path}
             end={path === "/"}
             className={({ isActive }) =>
-              `sidebar-link${isActive ? " sidebar-link--active" : ""}`
+              `mfe-academy-sidebar-link${isActive ? " mfe-academy-sidebar-link--active" : ""}`
             }
           >
             <Icon size={18} />
@@ -41,7 +41,7 @@ export default function Sidebar() {
         ))}
       </nav>
 
-      <div className="sidebar-footer">
+      <div className="mfe-academy-sidebar-footer">
       </div>
     </aside>
   );

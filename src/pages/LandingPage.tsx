@@ -41,38 +41,38 @@ const benefits = [
 
 export default function LandingPage() {
   return (
-    <div className="learning-page landing-page">
-      <section className="landing-benefits">
-        <div className="landing-intro">
+    <div className="learning-page mfe-academy-landing-page">
+      <section className="mfe-academy-landing-benefits">
+        <div className="mfe-academy-landing-intro">
           <p className="learning-eyebrow">Fortbildungsapp</p>
 
-          <h1 className="landing-title">
+          <h1 className="mfe-academy-landing-title">
             Dash <span>Academy</span>
           </h1>
 
-          <div className="landing-note">
-            <span className="landing-note-icon">✓</span>
+          <div className="mfe-academy-landing-note">
+            <span className="mfe-academy-landing-note-icon">✓</span>
             <span>Fortbildungsinhalte für Dash.</span>
           </div>
 
-          <div className="landing-actions">
+          <div className="mfe-academy-landing-actions">
             <Link
               to="/learning-path"
-              className="landing-start"
+              className="mfe-academy-landing-start"
             >
               Starten
             </Link>
           </div>
         </div>
 
-        <div className="landing-benefits-visual">
+        <div className="mfe-academy-landing-benefits-visual">
           {benefits.map((benefit, index) => (
-            <div key={index} className="landing-benefit">
-              <div className="landing-benefit-icon">
+            <div key={index} className="mfe-academy-landing-benefit">
+              <div className="mfe-academy-landing-benefit-icon">
                 {benefit.icon}
               </div>
-              <div className="landing-benefit-copy">
-                <span className="landing-benefit-number">{benefit.number}</span>
+              <div className="mfe-academy-landing-benefit-copy">
+                <span className="mfe-academy-landing-benefit-number">{benefit.number}</span>
                 <h2>{benefit.title}</h2>
                 <p>{benefit.description}</p>
               </div>
@@ -81,19 +81,19 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="landing-features">
-        <div className="feature-links-grid">
+      <section className="mfe-academy-landing-features">
+        <div className="mfe-academy-feature-links-grid">
           {featureLinks.map(({ label, path, icon: Icon, description }) => (
             <Link
               key={label}
               to={path}
-              className="feature-link-card"
+              className="mfe-academy-feature-link-card"
             >
-              <div className="feature-link-icon">
+              <div className="mfe-academy-feature-link-icon">
                 <Icon size={32} />
               </div>
-              <h3 className="feature-link-title">{label}</h3>
-              <p className="feature-link-description">{description}</p>
+              <h3 className="mfe-academy-feature-link-title">{label}</h3>
+              <p className="mfe-academy-feature-link-description">{description}</p>
             </Link>
           ))}
         </div>

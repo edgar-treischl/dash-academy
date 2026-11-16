@@ -22,15 +22,15 @@ export default function SettingsPage() {
       </header>
 
       <main className="learning-page-content">
-        <section className="settings-section">
+        <section className="mfe-academy-settings-section">
           <h2>Learning Preferences</h2>
-          <div className="settings-option">
+          <div className="mfe-academy-settings-option">
             <label>
               <input type="checkbox" defaultChecked />
               Enable notifications
             </label>
           </div>
-          <div className="settings-option">
+          <div className="mfe-academy-settings-option">
             <label>
               <input type="checkbox" defaultChecked />
               Show progress in sidebar
@@ -38,9 +38,9 @@ export default function SettingsPage() {
           </div>
         </section>
 
-        <section className="settings-section">
+        <section className="mfe-academy-settings-section">
           <h2>Data & Privacy</h2>
-          <div className="settings-option">
+          <div className="mfe-academy-settings-option">
             <label>
               <input type="checkbox" defaultChecked />
               Allow tracking of learning patterns
@@ -48,11 +48,11 @@ export default function SettingsPage() {
           </div>
         </section>
 
-        <section className="settings-section danger-zone">
+        <section className="mfe-academy-settings-section mfe-academy-danger-zone">
           <h2>Danger Zone</h2>
           <p>These actions cannot be undone.</p>
           <button
-            className="btn btn-danger"
+            className="mfe-academy-btn mfe-academy-btn--danger"
             onClick={handleResetProgress}
           >
             Reset All Progress

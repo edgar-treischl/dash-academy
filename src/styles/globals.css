@@ -5,7 +5,7 @@
    All components should use these tokens for maintainability.
    =================================================================== */
 
-:root {
+.mfe-academy {
   /* Typography */
   --sans: system-ui, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
@@ -72,7 +72,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+.mfe-academy {
   margin: 0;
   font: 1rem / var(--learning-leading-normal) var(--sans);
   letter-spacing: 0.18px;
@@ -85,50 +85,50 @@ body {
    BASE ELEMENT STYLES
    =================================================================== */
 
-.app-layout {
+.mfe-academy {
   min-height: 100vh;
   background: var(--learning-bg-light);
   color: var(--learning-text);
 }
 
-.app-layout *,
-.app-layout *::before,
-.app-layout *::after {
+.mfe-academy *,
+.mfe-academy *::before,
+.mfe-academy *::after {
   box-sizing: border-box;
 }
 
-.app-layout :is(h1, h2, h3, p) {
+.mfe-academy :is(h1, h2, h3, p) {
   margin: 0;
 }
 
-.app-layout :is(h1, h2, h3) {
+.mfe-academy :is(h1, h2, h3) {
   line-height: var(--learning-leading-tight);
   font-weight: 600;
 }
 
-.app-layout h2 {
+.mfe-academy h2 {
   font-size: var(--learning-text-xl);
 }
 
-.app-layout h3 {
+.mfe-academy h3 {
   font-size: var(--learning-text-lg);
 }
 
-.app-layout a {
+.mfe-academy a {
   color: inherit;
   text-decoration: none;
 }
 
-.app-layout :is(button, input) {
+.mfe-academy :is(button, input) {
   font: inherit;
   font-family: var(--sans);
 }
 
-.app-layout button {
+.mfe-academy button {
   cursor: pointer;
 }
 
-.app-layout :is(a, button, input):focus-visible {
+.mfe-academy :is(a, button, input):focus-visible {
   outline: 3px solid var(--learning-primary);
   outline-offset: 4px;
 }
@@ -138,7 +138,7 @@ body {
    =================================================================== */
 
 /* Sidebar Navigation */
-.app-layout .sidebar {
+.mfe-academy .mfe-academy-sidebar {
   position: fixed;
   inset: 0 auto 0 0;
   z-index: 10;
@@ -152,7 +152,7 @@ body {
   color: var(--learning-text);
 }
 
-.app-layout .sidebar-brand {
+.mfe-academy .mfe-academy-sidebar-brand {
   display: flex;
   align-items: center;
   gap: var(--learning-space-sm);
@@ -167,16 +167,16 @@ body {
   transition: var(--learning-transition);
 }
 
-.app-layout .sidebar-brand:hover {
+.mfe-academy .mfe-academy-sidebar-brand:hover {
   background: var(--learning-bg-hover);
 }
 
-.app-layout .sidebar-brand:focus-visible {
+.mfe-academy .mfe-academy-sidebar-brand:focus-visible {
   outline: 2px solid var(--learning-primary);
   outline-offset: 2px;
 }
 
-.app-layout .sidebar-brand-mark {
+.mfe-academy .mfe-academy-sidebar-brand-mark {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,12 +184,12 @@ body {
   flex-shrink: 0;
 }
 
-.app-layout .sidebar-nav {
+.mfe-academy .mfe-academy-sidebar-nav {
   display: grid;
   gap: var(--learning-space-sm);
 }
 
-.app-layout .sidebar-link {
+.mfe-academy .mfe-academy-sidebar-link {
   display: flex;
   align-items: center;
   gap: var(--learning-space-md);
@@ -201,22 +201,22 @@ body {
   transition: var(--learning-transition);
 }
 
-.app-layout .sidebar-link:hover {
+.mfe-academy .mfe-academy-sidebar-link:hover {
   background: var(--learning-bg-hover);
   color: var(--learning-primary);
 }
 
-.app-layout .sidebar-link--active {
+.mfe-academy .mfe-academy-sidebar-link--active {
   background: #f0f8ff;
   color: var(--learning-primary);
   font-weight: 600;
 }
 
-.app-layout .sidebar :is(a, button):focus-visible {
+.mfe-academy .mfe-academy-sidebar :is(a, button):focus-visible {
   outline-color: var(--learning-primary);
 }
 
-.app-layout .sidebar-footer {
+.mfe-academy .mfe-academy-sidebar-footer {
   margin-top: auto;
   padding-top: var(--learning-space-5xl);
   color: var(--learning-text-muted);
@@ -224,12 +224,12 @@ body {
 }
 
 /* Main Content Area */
-.app-layout .main-content {
+.mfe-academy .mfe-academy-main-content {
   min-width: 0;
   width: 100%;
 }
 
-.app-layout .main-content > main {
+.mfe-academy .mfe-academy-main-content > main {
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--learning-space-5xl);
@@ -237,7 +237,7 @@ body {
 }
 
 /* Topbar Header */
-.app-layout .topbar {
+.mfe-academy .mfe-academy-topbar {
   min-height: 72px;
   padding: var(--learning-space-lg) var(--learning-space-5xl);
   background: var(--learning-bg);
@@ -250,14 +250,14 @@ body {
   box-sizing: border-box;
 }
 
-.app-layout .topbar-left {
+.mfe-academy .mfe-academy-topbar-left {
   display: flex;
   align-items: center;
   gap: var(--learning-space-md);
   min-width: 0;
 }
 
-.app-layout .topbar-right {
+.mfe-academy .mfe-academy-topbar-right {
   display: flex;
   align-items: center;
   gap: var(--learning-space-lg);
@@ -265,14 +265,14 @@ body {
   justify-content: flex-end;
 }
 
-.app-layout .search-box {
+.mfe-academy .mfe-academy-search-box {
   display: flex;
   align-items: center;
   gap: var(--learning-space-md);
   color: var(--learning-text-muted);
 }
 
-.app-layout .search-box input {
+.mfe-academy .mfe-academy-search-box input {
   width: 240px;
   min-width: 0;
   max-width: 100%;
@@ -282,11 +282,11 @@ body {
   font-size: var(--learning-text-sm);
 }
 
-.app-layout .search-box input::placeholder {
+.mfe-academy .mfe-academy-search-box input::placeholder {
   color: var(--learning-text-muted);
 }
 
-.app-layout .notification-button {
+.mfe-academy .mfe-academy-notification-button {
   position: relative;
   display: flex;
   padding: var(--learning-space-xs);
@@ -296,11 +296,11 @@ body {
   transition: var(--learning-transition);
 }
 
-.app-layout .notification-button:hover {
+.mfe-academy .mfe-academy-notification-button:hover {
   color: var(--learning-primary);
 }
 
-.app-layout .notification-dot {
+.mfe-academy .mfe-academy-notification-dot {
   position: absolute;
   top: var(--learning-space-xs);
   right: var(--learning-space-xs);
@@ -310,7 +310,7 @@ body {
   background: var(--learning-danger);
 }
 
-.app-layout .topbar-brand {
+.mfe-academy .mfe-academy-topbar-brand {
   display: flex;
   align-items: center;
   gap: var(--learning-space-md);
@@ -322,11 +322,11 @@ body {
   transition: var(--learning-transition);
 }
 
-.app-layout .topbar-brand:hover {
+.mfe-academy .mfe-academy-topbar-brand:hover {
   color: var(--learning-primary);
 }
 
-.app-layout .topbar-brand-mark {
+.mfe-academy .mfe-academy-topbar-brand-mark {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -342,30 +342,30 @@ body {
    =================================================================== */
 
 /* Page Container */
-.app-layout .learning-page {
+.mfe-academy .learning-page {
   display: grid;
   gap: var(--learning-space-4xl);
 }
 
-.app-layout .learning-page--lesson {
+.mfe-academy .learning-page--lesson {
   width: 100%;
   min-width: 0;
   max-width: 840px;
   margin: 0 auto;
 }
 
-.app-layout .learning-page > section {
+.mfe-academy .learning-page > section {
   min-width: 0;
 }
 
 /* Page Headings */
-.app-layout .learning-eyebrow {
+.mfe-academy .learning-eyebrow {
   color: var(--learning-text-muted);
   font-size: var(--learning-text-sm);
   font-weight: 500;
 }
 
-.app-layout .learning-title {
+.mfe-academy .learning-title {
   margin-top: var(--learning-space-md);
   font-size: clamp(1.75rem, 3vw, 2rem);
   font-weight: 700;
@@ -373,38 +373,38 @@ body {
   color: var(--learning-text);
 }
 
-.app-layout .learning-description {
+.mfe-academy .learning-description {
   max-width: 70ch;
   margin-top: var(--learning-space-md);
   color: var(--learning-text-muted);
   line-height: var(--learning-leading-relaxed);
 }
 
-.app-layout .learning-page--path .learning-title {
+.mfe-academy .learning-page--path .learning-title {
   font-size: clamp(2.25rem, 4vw, 3rem);
   line-height: var(--learning-leading-tight);
 }
 
-.app-layout .learning-page--path .learning-section-title {
+.mfe-academy .learning-page--path .learning-section-title {
   font-size: clamp(1.5rem, 2.5vw, 1.75rem);
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: var(--learning-leading-tight);
 }
 
-.app-layout .learning-page--path .learning-continue-subheading {
+.mfe-academy .learning-page--path .learning-continue-subheading {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.015em;
 }
 
-.app-layout .learning-page--path .learning-continue-featured .learning-card-title {
+.mfe-academy .learning-page--path .learning-continue-featured .learning-card-title {
   font-size: clamp(1.25rem, 2vw, 1.5rem);
   line-height: var(--learning-leading-tight);
 }
 
 /* Progress Component */
-.app-layout .learning-progress {
+.mfe-academy .learning-progress {
   padding: var(--learning-space-4xl);
   border-radius: var(--learning-radius-xl);
   background: var(--learning-bg);
@@ -412,7 +412,7 @@ body {
   color: var(--learning-text);
 }
 
-.app-layout .learning-progress-header {
+.mfe-academy .learning-progress-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -420,9 +420,9 @@ body {
   flex-wrap: wrap;
 }
 
-.app-layout .learning-row,
-.app-layout .learning-section-heading,
-.app-layout .learning-card-footer {
+.mfe-academy .learning-row,
+.mfe-academy .learning-section-heading,
+.mfe-academy .learning-card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -430,7 +430,7 @@ body {
   flex-wrap: wrap;
 }
 
-.app-layout .learning-progress-label {
+.mfe-academy .learning-progress-label {
   color: var(--learning-text-muted);
   font-size: var(--learning-text-base);
   font-weight: 500;
@@ -438,7 +438,7 @@ body {
   letter-spacing: 0.08em;
 }
 
-.app-layout .learning-progress-value {
+.mfe-academy .learning-progress-value {
   margin-top: var(--learning-space-md);
   font-size: 2.5rem;
   font-weight: 800;
@@ -446,14 +446,14 @@ body {
   line-height: 1;
 }
 
-.app-layout .learning-progress-summary {
+.mfe-academy .learning-progress-summary {
   text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.app-layout .learning-progress-count {
+.mfe-academy .learning-progress-count {
   margin-top: var(--learning-space-md);
   font-size: 2rem;
   font-weight: 700;
@@ -462,7 +462,7 @@ body {
 }
 
 /* Progress Meter */
-.app-layout .learning-meter {
+.mfe-academy .learning-meter {
   height: 6px;
   margin-top: var(--learning-space-lg);
   overflow: hidden;
@@ -470,29 +470,29 @@ body {
   background: var(--learning-border-light);
 }
 
-.app-layout .learning-meter--hero {
+.mfe-academy .learning-meter--hero {
   height: 8px;
   margin-top: var(--learning-space-2xl);
   background: var(--learning-bg-hover);
 }
 
-.app-layout .learning-meter-fill {
+.mfe-academy .learning-meter-fill {
   height: 100%;
   border-radius: inherit;
   background: var(--learning-primary);
   transition: var(--learning-transition);
 }
 
-.app-layout .learning-meter--hero .learning-meter-fill {
+.mfe-academy .learning-meter--hero .learning-meter-fill {
   background: var(--learning-success);
 }
 
 /* Personal learning score card */
-.app-layout .learning-hero {
+.mfe-academy .learning-hero {
   margin-bottom: 0;
 }
 
-.app-layout .learning-score-card {
+.mfe-academy .learning-score-card {
   display: grid;
   grid-template-columns: minmax(220px, 0.85fr) minmax(0, 2fr);
   overflow: hidden;
@@ -501,7 +501,7 @@ body {
   background: var(--learning-bg);
 }
 
-.app-layout .learning-score-card-profile {
+.mfe-academy .learning-score-card-profile {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -513,7 +513,7 @@ body {
   border-right: 1px solid var(--learning-border);
 }
 
-.app-layout .learning-score-card-avatar {
+.mfe-academy .learning-score-card-avatar {
   display: block;
   width: 88px;
   height: 88px;
@@ -523,11 +523,11 @@ body {
   background: var(--learning-bg);
 }
 
-.app-layout .learning-score-card-identity {
+.mfe-academy .learning-score-card-identity {
   min-width: 0;
 }
 
-.app-layout .learning-score-card-identity h2 {
+.mfe-academy .learning-score-card-identity h2 {
   margin: 0;
   font-size: 2rem;
   letter-spacing: -0.025em;
@@ -535,13 +535,13 @@ body {
   overflow-wrap: anywhere;
 }
 
-.app-layout .learning-score-card-identity p {
+.mfe-academy .learning-score-card-identity p {
   margin: var(--learning-space-sm) 0 var(--learning-space-lg);
   color: var(--learning-text-muted);
   font-size: var(--learning-text-sm);
 }
 
-.app-layout .learning-score-card-level {
+.mfe-academy .learning-score-card-level {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -550,7 +550,7 @@ body {
   font-weight: 600;
 }
 
-.app-layout .learning-score-card-results {
+.mfe-academy .learning-score-card-results {
   min-width: 0;
   padding: var(--learning-space-4xl);
   display: flex;
@@ -559,14 +559,14 @@ body {
   gap: var(--learning-space-4xl);
 }
 
-.app-layout .learning-score-card-stats {
+.mfe-academy .learning-score-card-stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--learning-space-2xl);
   margin: 0;
 }
 
-.app-layout .learning-score-card-stats dt {
+.mfe-academy .learning-score-card-stats dt {
   font-size: var(--learning-text-sm);
   color: var(--learning-text-muted);
   line-height: var(--learning-leading-normal);
@@ -576,7 +576,7 @@ body {
   gap: var(--learning-space-xs);
 }
 
-.app-layout .learning-score-card-stats-item {
+.mfe-academy .learning-score-card-stats-item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -584,15 +584,15 @@ body {
   color: var(--learning-primary);
 }
 
-.app-layout .learning-score-card-stats-item svg {
+.mfe-academy .learning-score-card-stats-item svg {
   flex-shrink: 0;
 }
 
-.app-layout .learning-score-card-stats-item span {
+.mfe-academy .learning-score-card-stats-item span {
   color: var(--learning-text-muted);
 }
 
-.app-layout .learning-score-card-stats dd {
+.mfe-academy .learning-score-card-stats dd {
   margin: var(--learning-space-sm) 0 0;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
@@ -600,13 +600,13 @@ body {
   line-height: var(--learning-leading-tight);
 }
 
-.app-layout .learning-score-card-stats dd span {
+.mfe-academy .learning-score-card-stats dd span {
   font-size: var(--learning-text-base);
   font-weight: 400;
   color: var(--learning-text-muted);
 }
 
-.app-layout .learning-score-card-progress-label {
+.mfe-academy .learning-score-card-progress-label {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -614,34 +614,34 @@ body {
   font-size: var(--learning-text-sm);
 }
 
-.app-layout .learning-score-card-progress-label strong {
+.mfe-academy .learning-score-card-progress-label strong {
   color: var(--learning-primary);
   font-variant-numeric: tabular-nums;
 }
 
-.app-layout .learning-score-card-meter {
+.mfe-academy .learning-score-card-meter {
   height: 10px;
   margin-top: var(--learning-space-md);
   background: var(--learning-border);
 }
 
-.app-layout .learning-score-card-meter .learning-meter-fill {
+.mfe-academy .learning-score-card-meter .learning-meter-fill {
   background: var(--learning-primary);
 }
 
-.app-layout .learning-score-card-achievements {
+.mfe-academy .learning-score-card-achievements {
   grid-column: 1 / -1;
   min-width: 0;
   padding: var(--learning-space-2xl) var(--learning-space-4xl);
   border-top: 1px solid var(--learning-border);
 }
 
-.app-layout .learning-score-card-achievements h3 {
+.mfe-academy .learning-score-card-achievements h3 {
   margin: 0 0 var(--learning-space-md);
   font-size: var(--learning-text-lg);
 }
 
-.app-layout .learning-score-card-badges {
+.mfe-academy .learning-score-card-badges {
   display: flex;
   flex-wrap: wrap;
   gap: var(--learning-space-xl) var(--learning-space-4xl);
@@ -650,7 +650,7 @@ body {
   margin: 0;
 }
 
-.app-layout .learning-score-card-badges li {
+.mfe-academy .learning-score-card-badges li {
   display: flex;
   align-items: center;
   gap: var(--learning-space-md);
@@ -660,89 +660,89 @@ body {
   overflow-wrap: anywhere;
 }
 
-.app-layout .learning-score-card-badges img,
-.app-layout .learning-score-card-badge-icon {
+.mfe-academy .learning-score-card-badges img,
+.mfe-academy .learning-score-card-badge-icon {
   width: 40px;
   height: 40px;
   flex-shrink: 0;
   object-fit: contain;
 }
 
-.app-layout .learning-score-card-badge-icon {
+.mfe-academy .learning-score-card-badge-icon {
   display: grid;
   place-items: center;
   font-size: 1.75rem;
 }
 
-.app-layout .learning-score-card-badges p,
-.app-layout .learning-score-card-empty {
+.mfe-academy .learning-score-card-badges p,
+.mfe-academy .learning-score-card-empty {
   margin: var(--learning-space-xs) 0 0;
   color: var(--learning-text-muted);
   font-size: var(--learning-text-sm);
 }
 
 @media (max-width: 1024px) {
-  .app-layout .learning-score-card {
+  .mfe-academy .learning-score-card {
     grid-template-columns: 1fr;
   }
 
-  .app-layout .learning-score-card-profile {
+  .mfe-academy .learning-score-card-profile {
     border-right: 0;
     border-bottom: 1px solid var(--learning-border);
   }
 }
 
 @media (max-width: 600px) {
-  .app-layout .learning-score-card-profile,
-  .app-layout .learning-score-card-results,
-  .app-layout .learning-score-card-achievements {
+  .mfe-academy .learning-score-card-profile,
+  .mfe-academy .learning-score-card-results,
+  .mfe-academy .learning-score-card-achievements {
     padding: var(--learning-space-xl);
   }
 
-  .app-layout .learning-score-card-avatar {
+  .mfe-academy .learning-score-card-avatar {
     width: 64px;
     height: 64px;
   }
 
-  .app-layout .learning-score-card-stats {
+  .mfe-academy .learning-score-card-stats {
     grid-template-columns: 1fr;
     gap: var(--learning-space-lg);
   }
 
-  .app-layout .learning-score-card-stats > div {
+  .mfe-academy .learning-score-card-stats > div {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     gap: var(--learning-space-md);
   }
 
-  .app-layout .learning-score-card-stats dd {
+  .mfe-academy .learning-score-card-stats dd {
     margin: 0;
     white-space: nowrap;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .app-layout .learning-score-card-meter .learning-meter-fill {
+  .mfe-academy .learning-score-card-meter .learning-meter-fill {
     transition: none;
   }
 }
 
 /* Section Headings */
-.app-layout .learning-section-title,
-.app-layout .learning-section-heading {
+.mfe-academy .learning-section-title,
+.mfe-academy .learning-section-heading {
   margin-bottom: var(--learning-space-lg);
   color: var(--learning-text);
 }
 
 /* Module Grid & Cards */
-.app-layout .learning-module-grid {
+.mfe-academy .learning-module-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--learning-space-lg);
 }
 
-.app-layout .learning-card {
+.mfe-academy .learning-card {
   display: block;
   padding: var(--learning-space-2xl);
   border: 1px solid var(--learning-border);
@@ -751,20 +751,20 @@ body {
   transition: var(--learning-transition);
 }
 
-.app-layout .learning-card--link:hover {
+.mfe-academy .learning-card--link:hover {
   border-color: var(--learning-primary);
   box-shadow: var(--learning-shadow);
   transform: translateY(-2px);
 }
 
-.app-layout .learning-card-title {
+.mfe-academy .learning-card-title {
   margin-top: var(--learning-space-xs);
   font-size: var(--learning-text-lg);
   font-weight: 600;
   color: var(--learning-text);
 }
 
-.app-layout .learning-card-description {
+.mfe-academy .learning-card-description {
   max-width: 70ch;
   margin-top: var(--learning-space-md);
   color: var(--learning-text-muted);
@@ -772,45 +772,45 @@ body {
   line-height: var(--learning-leading-relaxed);
 }
 
-.app-layout .learning-meta,
-.app-layout .learning-card-meta,
-.app-layout .learning-lesson-number,
-.app-layout .learning-duration {
+.mfe-academy .learning-meta,
+.mfe-academy .learning-card-meta,
+.mfe-academy .learning-lesson-number,
+.mfe-academy .learning-duration {
   color: var(--learning-text-muted);
   font-size: var(--learning-text-xs);
   font-weight: 500;
 }
 
-.app-layout .learning-card-meta,
-.app-layout .learning-card-footer {
+.mfe-academy .learning-card-meta,
+.mfe-academy .learning-card-footer {
   margin-top: var(--learning-space-lg);
 }
 
-.app-layout .learning-link,
-.app-layout .learning-card-action {
+.mfe-academy .learning-link,
+.mfe-academy .learning-card-action {
   color: var(--learning-primary);
   font-size: var(--learning-text-sm);
   font-weight: 600;
   transition: var(--learning-transition);
 }
 
-.app-layout a.learning-link:hover {
+.mfe-academy a.learning-link:hover {
   text-decoration: underline;
 }
 
-.app-layout .learning-card-action {
+.mfe-academy .learning-card-action {
   display: inline-block;
   margin-top: var(--learning-space-lg);
 }
 
 /* List Layouts */
-.app-layout .learning-list {
+.mfe-academy .learning-list {
   display: grid;
   gap: var(--learning-space-lg);
 }
 
-.app-layout .learning-path-row,
-.app-layout .learning-lesson-row {
+.mfe-academy .learning-path-row,
+.mfe-academy .learning-lesson-row {
   display: flex;
   align-items: flex-start;
   gap: var(--learning-space-xl);
@@ -821,11 +821,11 @@ body {
 }
 
 
-.app-layout .learning-lesson-row {
+.mfe-academy .learning-lesson-row {
   align-items: center;
 }
 
-.app-layout .learning-module-icon {
+.mfe-academy .learning-module-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -839,46 +839,46 @@ body {
   font-size: 1.25rem;
 }
 
-.app-layout .learning-module-image {
+.mfe-academy .learning-module-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
   padding: var(--learning-space-md);
 }
 
-.app-layout .learning-row-content {
+.mfe-academy .learning-row-content {
   flex: 1;
   min-width: 0;
 }
 
-.app-layout .learning-status {
+.mfe-academy .learning-status {
   color: var(--learning-text-muted);
   font-size: var(--learning-text-sm);
   font-weight: 500;
 }
 
-.app-layout .learning-status-complete {
+.mfe-academy .learning-status-complete {
   color: #28a745;
   font-weight: 600;
 }
 
-.app-layout .learning-muted {
+.mfe-academy .learning-muted {
   color: var(--learning-text-muted);
 }
 
-.app-layout .learning-duration,
-.app-layout .sidebar-link svg,
-.app-layout .learning-lesson-row > svg,
-.app-layout .search-box > svg {
+.mfe-academy .learning-duration,
+.mfe-academy .mfe-academy-sidebar-link svg,
+.mfe-academy .learning-lesson-row > svg,
+.mfe-academy .mfe-academy-search-box > svg {
   flex-shrink: 0;
   color: var(--learning-text-muted);
 }
 
-.app-layout .learning-duration {
+.mfe-academy .learning-duration {
   white-space: nowrap;
 }
 
-.app-layout .learning-lesson-number {
+.mfe-academy .learning-lesson-number {
   margin-top: var(--learning-space-2xl);
   color: var(--learning-text-muted);
   font-size: var(--learning-text-xs);
@@ -888,7 +888,7 @@ body {
    LESSON CONTENT COMPONENTS
    =================================================================== */
 
-.app-layout .learning-lesson-content {
+.mfe-academy .learning-lesson-content {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: var(--learning-space-4xl);
@@ -898,12 +898,12 @@ body {
   border: 1px solid var(--learning-border);
 }
 
-.app-layout .learning-prose {
+.mfe-academy .learning-prose {
   color: var(--learning-text);
   line-height: var(--learning-leading-loose);
 }
 
-.app-layout .learning-callout {
+.mfe-academy .learning-callout {
   padding: var(--learning-space-xl) var(--learning-space-2xl);
   border-left: 4px solid var(--learning-primary);
   border-radius: 0 var(--learning-radius-lg) var(--learning-radius-lg) 0;
@@ -912,14 +912,14 @@ body {
   transition: var(--learning-transition);
 }
 
-.app-layout .learning-quiz-answers {
+.mfe-academy .learning-quiz-answers {
   display: grid;
   gap: var(--learning-space-md);
   margin: var(--learning-space-lg) 0 0;
   padding-left: var(--learning-space-2xl);
 }
 
-.app-layout .learning-lesson-footer {
+.mfe-academy .learning-lesson-footer {
   padding-top: var(--learning-space-2xl);
   border-top: 1px solid var(--learning-border);
   display: flex;
@@ -929,7 +929,7 @@ body {
 }
 
 /* Button Styles */
-.app-layout .learning-button {
+.mfe-academy .learning-button {
   padding: var(--learning-space-md) var(--learning-space-2xl);
   border: 1px solid var(--learning-primary);
   border-radius: var(--learning-radius-md);
@@ -941,14 +941,14 @@ body {
   cursor: pointer;
 }
 
-.app-layout .learning-button:hover {
+.mfe-academy .learning-button:hover {
   background: #0d6bb6;
   border-color: #0d6bb6;
   transform: translateY(-2px);
   box-shadow: var(--learning-shadow);
 }
 
-.app-layout .learning-button:active {
+.mfe-academy .learning-button:active {
   transform: translateY(0);
 }
 
@@ -956,11 +956,11 @@ body {
    CONTINUE LEARNING SECTION
    =================================================================== */
 
-.app-layout .learning-continue-section {
+.mfe-academy .learning-continue-section {
   min-width: 0;
 }
 
-.app-layout .learning-continue-featured {
+.mfe-academy .learning-continue-featured {
   display: flex;
   align-items: center;
   gap: var(--learning-space-xl);
@@ -975,13 +975,13 @@ body {
   margin-bottom: var(--learning-space-3xl);
 }
 
-.app-layout .learning-continue-featured:hover,
-.app-layout .learning-continue-featured:focus-visible {
+.mfe-academy .learning-continue-featured:hover,
+.mfe-academy .learning-continue-featured:focus-visible {
   border-color: var(--learning-primary);
   background: color-mix(in srgb, var(--learning-primary) 5%, var(--learning-bg));
 }
 
-.app-layout .learning-continue-featured-image {
+.mfe-academy .learning-continue-featured-image {
   width: 96px;
   height: 96px;
   flex-shrink: 0;
@@ -993,7 +993,7 @@ body {
   justify-content: center;
 }
 
-.app-layout .learning-continue-featured-image-content {
+.mfe-academy .learning-continue-featured-image-content {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -1001,7 +1001,7 @@ body {
   box-sizing: border-box;
 }
 
-.app-layout .learning-continue-featured-content {
+.mfe-academy .learning-continue-featured-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1009,14 +1009,14 @@ body {
   min-width: 0;
 }
 
-.app-layout .learning-continue-featured-content .learning-link {
+.mfe-academy .learning-continue-featured-content .learning-link {
   color: var(--learning-primary);
   font-size: var(--learning-text-sm);
   font-weight: 600;
   margin: 0 0 var(--learning-space-xs);
 }
 
-.app-layout .learning-continue-featured-content .learning-card-title {
+.mfe-academy .learning-continue-featured-content .learning-card-title {
   margin-top: 0;
   margin-bottom: var(--learning-space-xs);
   font-size: var(--learning-text-xl);
@@ -1024,7 +1024,7 @@ body {
   color: var(--learning-text);
 }
 
-.app-layout .learning-continue-featured-content .learning-card-description {
+.mfe-academy .learning-continue-featured-content .learning-card-description {
   max-width: 70ch;
   margin-top: 0;
   margin-bottom: var(--learning-space-sm);
@@ -1033,7 +1033,7 @@ body {
   line-height: var(--learning-leading-normal);
 }
 
-.app-layout .learning-continue-featured-content .learning-card-action {
+.mfe-academy .learning-continue-featured-content .learning-card-action {
   color: var(--learning-primary);
   font-size: var(--learning-text-sm);
   font-weight: 600;
@@ -1042,31 +1042,31 @@ body {
   margin-top: 0;
 }
 
-.app-layout .learning-continue-featured:hover .learning-card-action,
-.app-layout .learning-continue-featured:focus-visible .learning-card-action {
+.mfe-academy .learning-continue-featured:hover .learning-card-action,
+.mfe-academy .learning-continue-featured:focus-visible .learning-card-action {
   text-decoration: underline;
 }
 
 @media (max-width: 600px) {
-  .app-layout .learning-continue-featured {
+  .mfe-academy .learning-continue-featured {
     align-items: flex-start;
     gap: var(--learning-space-lg);
     padding: var(--learning-space-lg);
   }
 
-  .app-layout .learning-continue-featured-image {
+  .mfe-academy .learning-continue-featured-image {
     width: 64px;
     height: 64px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .app-layout .learning-continue-featured {
+  .mfe-academy .learning-continue-featured {
     transition: none;
   }
 }
 
-.app-layout .learning-continue-subheading {
+.mfe-academy .learning-continue-subheading {
   margin-top: var(--learning-space-4xl);
   margin-bottom: var(--learning-space-lg);
   font-size: var(--learning-text-lg);
@@ -1074,14 +1074,14 @@ body {
   color: var(--learning-text);
 }
 
-.app-layout .learning-continue-grid {
+.mfe-academy .learning-continue-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: var(--learning-space-xl);
   margin-top: var(--learning-space-lg);
 }
 
-.app-layout .learning-continue-card {
+.mfe-academy .learning-continue-card {
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -1094,13 +1094,13 @@ body {
   color: inherit;
 }
 
-.app-layout .learning-continue-card:hover {
+.mfe-academy .learning-continue-card:hover {
   border-color: var(--learning-primary);
   box-shadow: var(--learning-shadow);
   transform: translateY(-4px);
 }
 
-.app-layout .learning-continue-image {
+.mfe-academy .learning-continue-image {
   width: 100%;
   height: 160px;
   overflow: hidden;
@@ -1111,14 +1111,14 @@ body {
   justify-content: center;
 }
 
-.app-layout .learning-continue-image-content {
+.mfe-academy .learning-continue-image-content {
   width: 100%;
   height: 100%;
   object-fit: contain;
   padding: var(--learning-space-lg);
 }
 
-.app-layout .learning-continue-content {
+.mfe-academy .learning-continue-content {
   display: flex;
   flex-direction: column;
   padding: var(--learning-space-2xl);
@@ -1126,14 +1126,14 @@ body {
   min-width: 0;
 }
 
-.app-layout .learning-continue-content .learning-card-title {
+.mfe-academy .learning-continue-content .learning-card-title {
   margin-top: var(--learning-space-xs);
   font-size: var(--learning-text-lg);
   font-weight: 600;
   color: var(--learning-text);
 }
 
-.app-layout .learning-continue-content .learning-card-description {
+.mfe-academy .learning-continue-content .learning-card-description {
   max-width: none;
   margin-top: var(--learning-space-md);
   color: var(--learning-text-muted);
@@ -1142,7 +1142,7 @@ body {
   flex: 1;
 }
 
-.app-layout .learning-continue-progress {
+.mfe-academy .learning-continue-progress {
   display: flex;
   flex-direction: column;
   gap: var(--learning-space-md);
@@ -1151,18 +1151,18 @@ body {
   border-top: 1px solid var(--learning-border-light);
 }
 
-.app-layout .learning-continue-progress .learning-meter {
+.mfe-academy .learning-continue-progress .learning-meter {
   margin-top: 0;
   height: 4px;
 }
 
-.app-layout .learning-continue-progress .learning-meta {
+.mfe-academy .learning-continue-progress .learning-meta {
   color: var(--learning-text-muted);
   font-size: var(--learning-text-xs);
   font-weight: 500;
 }
 
-.app-layout .learning-continue-card .learning-card-action {
+.mfe-academy .learning-continue-card .learning-card-action {
   color: var(--learning-primary);
   font-size: var(--learning-text-sm);
   font-weight: 600;
@@ -1171,7 +1171,7 @@ body {
   transition: var(--learning-transition);
 }
 
-.app-layout .learning-continue-card:hover .learning-card-action {
+.mfe-academy .learning-continue-card:hover .learning-card-action {
   color: #0d6bb6;
   text-decoration: underline;
 }
@@ -1181,89 +1181,89 @@ body {
    =================================================================== */
 
 @media (max-width: 1000px) {
-  .app-layout .main-content > main {
+  .mfe-academy .mfe-academy-main-content > main {
     padding: var(--learning-space-3xl);
   }
 
-  .app-layout .topbar {
+  .mfe-academy .mfe-academy-topbar {
     padding-inline: var(--learning-space-3xl);
   }
 
-  .app-layout .search-box input {
+  .mfe-academy .mfe-academy-search-box input {
     width: 190px;
   }
 }
 
 @media (max-width: 760px) {
-  .app-layout .sidebar {
+  .mfe-academy .mfe-academy-sidebar {
     position: static;
     width: auto;
     padding: var(--learning-space-lg);
   }
 
-  .app-layout .sidebar-brand {
+  .mfe-academy .mfe-academy-sidebar-brand {
     margin-bottom: var(--learning-space-lg);
   }
 
-  .app-layout .sidebar-nav {
+  .mfe-academy .mfe-academy-sidebar-nav {
     display: flex;
     overflow-x: auto;
     padding: var(--learning-space-xs);
     gap: var(--learning-space-md);
   }
 
-  .app-layout .sidebar-link {
+  .mfe-academy .mfe-academy-sidebar-link {
     flex-shrink: 0;
     padding: var(--learning-space-xs) var(--learning-space-md);
     font-size: var(--learning-text-xs);
   }
 
-  .app-layout .sidebar-footer {
+  .mfe-academy .mfe-academy-sidebar-footer {
     display: none;
   }
 
-  .app-layout .main-content {
+  .mfe-academy .mfe-academy-main-content {
     margin-left: 0;
   }
 
-  .app-layout .main-content > main {
+  .mfe-academy .mfe-academy-main-content > main {
     padding: var(--learning-space-xl) var(--learning-space-lg);
   }
 
-  .app-layout .topbar {
+  .mfe-academy .mfe-academy-topbar {
     padding-inline: var(--learning-space-lg);
     gap: var(--learning-space-md);
     flex-direction: column;
     align-items: stretch;
   }
 
-  .app-layout .topbar-right {
+  .mfe-academy .mfe-academy-topbar-right {
     gap: var(--learning-space-md);
   }
 
-  .app-layout .search-box input {
+  .mfe-academy .mfe-academy-search-box input {
     width: 100%;
   }
 
-  .app-layout .learning-module-grid {
+  .mfe-academy .learning-module-grid {
     grid-template-columns: 1fr;
   }
 
-  .app-layout .learning-card,
-  .app-layout .learning-progress {
+  .mfe-academy .learning-card,
+  .mfe-academy .learning-progress {
     padding: var(--learning-space-xl);
   }
 
-  .app-layout .learning-path-row,
-  .app-layout .learning-lesson-row {
+  .mfe-academy .learning-path-row,
+  .mfe-academy .learning-lesson-row {
     gap: var(--learning-space-md);
   }
 
-  .app-layout .achievements-grid {
+  .mfe-academy .achievements-grid {
     grid-template-columns: 1fr;
   }
 
-  .app-layout .learning-lesson-footer {
+  .mfe-academy .learning-lesson-footer {
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -1273,7 +1273,7 @@ body {
    FEATURE LINK COMPONENTS
    =================================================================== */
 
-.app-layout .feature-links-grid {
+.mfe-academy .mfe-academy-feature-links-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--learning-space-xl);
@@ -1281,7 +1281,7 @@ body {
   margin-bottom: var(--learning-space-3xl);
 }
 
-.app-layout .feature-link-card {
+.mfe-academy .mfe-academy-feature-link-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1296,13 +1296,13 @@ body {
   cursor: pointer;
 }
 
-.app-layout .feature-link-card:hover {
+.mfe-academy .mfe-academy-feature-link-card:hover {
   border-color: var(--learning-primary);
   box-shadow: 0 4px 12px rgba(30, 138, 217, 0.1);
   transform: translateY(-4px);
 }
 
-.app-layout .feature-link-icon {
+.mfe-academy .mfe-academy-feature-link-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1314,12 +1314,12 @@ body {
   color: var(--learning-primary);
 }
 
-.app-layout .feature-link-icon svg {
+.mfe-academy .mfe-academy-feature-link-icon svg {
   width: 32px;
   height: 32px;
 }
 
-.app-layout .feature-link-title {
+.mfe-academy .mfe-academy-feature-link-title {
   margin: 0 0 var(--learning-space-sm) 0;
   font-size: var(--learning-text-base);
   font-weight: 600;
@@ -1327,7 +1327,7 @@ body {
   text-align: center;
 }
 
-.app-layout .feature-link-description {
+.mfe-academy .mfe-academy-feature-link-description {
   margin: 0;
   font-size: var(--learning-text-sm);
   color: var(--learning-text-muted);
@@ -1338,14 +1338,14 @@ body {
    ACHIEVEMENT COMPONENTS
    =================================================================== */
 
-.app-layout .achievements-grid {
+.mfe-academy .achievements-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: var(--learning-space-xl);
   margin-top: var(--learning-space-2xl);
 }
 
-.app-layout .achievement-card {
+.mfe-academy .achievement-card {
   padding: var(--learning-space-2xl);
   background: var(--learning-bg);
   border: 2px solid var(--learning-border);
@@ -1353,22 +1353,22 @@ body {
   text-align: center;
 }
 
-.app-layout .achievement-card--earned {
+.mfe-academy .achievement-card--earned {
   border-color: var(--learning-primary);
   background: color-mix(in srgb, var(--learning-primary) 4%, var(--learning-bg));
 }
 
-.app-layout .achievement-card--locked {
+.mfe-academy .achievement-card--locked {
   border-style: dashed;
   background: var(--learning-bg-hover);
 }
 
-.app-layout .achievement-card--locked .achievement-image-content {
+.mfe-academy .achievement-card--locked .achievement-image-content {
   filter: grayscale(1);
   opacity: 0.6;
 }
 
-.app-layout .achievement-card .achievement-status {
+.mfe-academy .achievement-card .achievement-status {
   display: inline-block;
   margin: 0 0 var(--learning-space-md);
   padding: var(--learning-space-xs) var(--learning-space-md);
@@ -1380,22 +1380,22 @@ body {
   font-weight: 600;
 }
 
-.app-layout .achievement-card--earned .achievement-status {
+.mfe-academy .achievement-card--earned .achievement-status {
   border-color: var(--learning-primary);
   color: var(--learning-text);
 }
 
-.app-layout .achievement-icon {
+.mfe-academy .achievement-icon {
   font-size: 48px;
   margin-bottom: var(--learning-space-md);
 }
 
-.app-layout .achievement-card h3 {
+.mfe-academy .achievement-card h3 {
   margin-bottom: var(--learning-space-md);
   color: var(--learning-text);
 }
 
-.app-layout .achievement-card p {
+.mfe-academy .achievement-card p {
   font-size: var(--learning-text-sm);
   color: var(--learning-text-muted);
 }
@@ -1404,8 +1404,8 @@ body {
    PROFILE COMPONENTS
    =================================================================== */
 
-.app-layout .profile-card,
-.app-layout .profile-stats {
+.mfe-academy .profile-card,
+.mfe-academy .profile-stats {
   margin-top: var(--learning-space-2xl);
   padding: var(--learning-space-2xl);
   background: var(--learning-bg);
@@ -1413,32 +1413,32 @@ body {
   border-radius: var(--learning-radius-md);
 }
 
-.app-layout .profile-info {
+.mfe-academy .profile-info {
   display: flex;
   flex-direction: column;
   gap: var(--learning-space-lg);
   margin-top: var(--learning-space-lg);
 }
 
-.app-layout .profile-field {
+.mfe-academy .profile-field {
   display: flex;
   gap: var(--learning-space-md);
 }
 
-.app-layout .profile-field .label {
+.mfe-academy .profile-field .label {
   min-width: 120px;
   font-weight: 600;
   color: var(--learning-text);
 }
 
-.app-layout .stats-grid {
+.mfe-academy .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--learning-space-xl);
   margin-top: var(--learning-space-lg);
 }
 
-.app-layout .stat-item {
+.mfe-academy .stat-item {
   padding: var(--learning-space-lg);
   background: var(--learning-bg-light);
   border-radius: var(--learning-radius-md);
@@ -1446,12 +1446,12 @@ body {
   transition: var(--learning-transition);
 }
 
-.app-layout .stat-item:hover {
+.mfe-academy .stat-item:hover {
   background: #f5f5f5;
   border: 1px solid var(--learning-primary);
 }
 
-.app-layout .stat-value {
+.mfe-academy .stat-value {
   display: block;
   font-size: 2rem;
   font-weight: 600;
@@ -1459,7 +1459,7 @@ body {
   margin-bottom: var(--learning-space-md);
 }
 
-.app-layout .stat-label {
+.mfe-academy .stat-label {
   display: block;
   font-size: var(--learning-text-sm);
   color: var(--learning-text-muted);
@@ -1469,7 +1469,7 @@ body {
    SETTINGS COMPONENTS
    =================================================================== */
 
-.app-layout .settings-section {
+.mfe-academy .mfe-academy-settings-section {
   margin-top: var(--learning-space-2xl);
   padding: var(--learning-space-2xl);
   background: var(--learning-bg);
@@ -1477,16 +1477,16 @@ body {
   border-radius: var(--learning-radius-md);
 }
 
-.app-layout .settings-section h2 {
+.mfe-academy .mfe-academy-settings-section h2 {
   margin-bottom: var(--learning-space-lg);
   color: var(--learning-text);
 }
 
-.app-layout .settings-option {
+.mfe-academy .mfe-academy-settings-option {
   margin-bottom: var(--learning-space-md);
 }
 
-.app-layout .settings-option label {
+.mfe-academy .mfe-academy-settings-option label {
   display: flex;
   align-items: center;
   gap: var(--learning-space-md);
@@ -1495,32 +1495,32 @@ body {
   transition: var(--learning-transition);
 }
 
-.app-layout .settings-option label:hover {
+.mfe-academy .mfe-academy-settings-option label:hover {
   color: var(--learning-primary);
 }
 
-.app-layout .settings-option input[type="checkbox"] {
+.mfe-academy .mfe-academy-settings-option input[type="checkbox"] {
   width: 18px;
   height: 18px;
   cursor: pointer;
   accent-color: var(--learning-primary);
 }
 
-.app-layout .settings-section.danger-zone {
+.mfe-academy .mfe-academy-settings-section.mfe-academy-danger-zone {
   border-color: #fecaca;
   background: #fef8f8;
 }
 
-.app-layout .settings-section.danger-zone h2 {
+.mfe-academy .mfe-academy-settings-section.mfe-academy-danger-zone h2 {
   color: #991b1b;
 }
 
-.app-layout .settings-section.danger-zone p {
+.mfe-academy .mfe-academy-settings-section.mfe-academy-danger-zone p {
   color: var(--learning-text-muted);
   margin-bottom: var(--learning-space-lg);
 }
 
-.app-layout .btn {
+.mfe-academy .mfe-academy-btn {
   padding: var(--learning-space-md) var(--learning-space-xl);
   font-size: 1rem;
   border: 1px solid var(--learning-border);
@@ -1532,25 +1532,25 @@ body {
   color: var(--learning-text);
 }
 
-.app-layout .btn:hover {
+.mfe-academy .mfe-academy-btn:hover {
   background: var(--learning-bg-hover);
   border-color: var(--learning-primary);
 }
 
-.app-layout .btn-danger {
+.mfe-academy .mfe-academy-btn--danger {
   background: var(--learning-danger);
   color: white;
   border-color: var(--learning-danger);
 }
 
-.app-layout .btn-danger:hover {
+.mfe-academy .mfe-academy-btn--danger:hover {
   background: #b91c1c;
   border-color: #b91c1c;
   transform: translateY(-2px);
   box-shadow: var(--learning-shadow);
 }
 
-.app-layout .btn-danger:active {
+.mfe-academy .mfe-academy-btn--danger:active {
   transform: translateY(0);
 }
 
@@ -1558,11 +1558,11 @@ body {
    MARKDOWN & COMPONENT CONTENT STYLES
    =================================================================== */
 
-.app-layout .learning-markdown-section {
+.mfe-academy .learning-markdown-section {
   min-width: 0;
 }
 
-.app-layout .learning-markdown-content {
+.mfe-academy .learning-markdown-content {
   max-width: 66ch;
   margin-inline: auto;
   font-size: clamp(1.125rem, 1rem + 0.3vw, 1.25rem);
@@ -1572,12 +1572,12 @@ body {
   color: var(--learning-text);
 }
 
-.app-layout .learning-markdown-content h1,
-.app-layout .learning-markdown-content h2,
-.app-layout .learning-markdown-content h3,
-.app-layout .learning-markdown-content h4,
-.app-layout .learning-markdown-content h5,
-.app-layout .learning-markdown-content h6 {
+.mfe-academy .learning-markdown-content h1,
+.mfe-academy .learning-markdown-content h2,
+.mfe-academy .learning-markdown-content h3,
+.mfe-academy .learning-markdown-content h4,
+.mfe-academy .learning-markdown-content h5,
+.mfe-academy .learning-markdown-content h6 {
   margin-top: 2em;
   margin-bottom: var(--learning-space-lg);
   line-height: var(--learning-leading-tight);
@@ -1585,68 +1585,68 @@ body {
   color: var(--learning-text);
 }
 
-.app-layout .learning-markdown-content h1 {
+.mfe-academy .learning-markdown-content h1 {
   font-size: 1.65em;
   letter-spacing: -0.025em;
 }
 
-.app-layout .learning-markdown-content h2 {
+.mfe-academy .learning-markdown-content h2 {
   font-size: 1.35em;
   letter-spacing: -0.015em;
 }
 
-.app-layout .learning-markdown-content h3 {
+.mfe-academy .learning-markdown-content h3 {
   margin-top: 1.5em;
   font-size: 1.15em;
 }
 
-.app-layout .learning-markdown-content h4 {
+.mfe-academy .learning-markdown-content h4 {
   font-size: 1em;
 }
 
-.app-layout .learning-markdown-content h5,
-.app-layout .learning-markdown-content h6 {
+.mfe-academy .learning-markdown-content h5,
+.mfe-academy .learning-markdown-content h6 {
   font-size: 0.95em;
 }
 
-.app-layout .learning-markdown-content p {
+.mfe-academy .learning-markdown-content p {
   margin-block: 0 1.25em;
 }
 
-.app-layout .learning-markdown-content > :first-child {
+.mfe-academy .learning-markdown-content > :first-child {
   margin-top: 0;
 }
 
-.app-layout .learning-markdown-content > :last-child {
+.mfe-academy .learning-markdown-content > :last-child {
   margin-bottom: 0;
 }
 
-.app-layout .learning-markdown-content a {
+.mfe-academy .learning-markdown-content a {
   color: var(--learning-teal);
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
 
-.app-layout .learning-markdown-content a:hover {
+.mfe-academy .learning-markdown-content a:hover {
   text-decoration-thickness: 2px;
 }
 
-.app-layout .learning-markdown-content ul,
-.app-layout .learning-markdown-content ol {
+.mfe-academy .learning-markdown-content ul,
+.mfe-academy .learning-markdown-content ol {
   margin-block: 0 1.25em;
   padding-left: 1.5em;
 }
 
-.app-layout .learning-markdown-content li {
+.mfe-academy .learning-markdown-content li {
   margin-block: 0.4em;
   padding-left: 0.2em;
 }
 
-.app-layout .learning-markdown-content li > :is(ul, ol) {
+.mfe-academy .learning-markdown-content li > :is(ul, ol) {
   margin-block: 0.4em 0;
 }
 
-.app-layout .learning-markdown-content blockquote {
+.mfe-academy .learning-markdown-content blockquote {
   margin: 1.5em 0;
   padding: var(--learning-space-lg) var(--learning-space-xl);
   border-left: 4px solid var(--learning-teal);
@@ -1655,21 +1655,21 @@ body {
   color: var(--learning-text);
 }
 
-.app-layout .learning-markdown-content blockquote > :first-child {
+.mfe-academy .learning-markdown-content blockquote > :first-child {
   margin-top: 0;
 }
 
-.app-layout .learning-markdown-content blockquote > :last-child {
+.mfe-academy .learning-markdown-content blockquote > :last-child {
   margin-bottom: 0;
 }
 
-.app-layout .learning-markdown-content hr {
+.mfe-academy .learning-markdown-content hr {
   margin: 2em 0;
   border: 0;
   border-top: 1px solid var(--learning-border);
 }
 
-.app-layout .learning-markdown-content code {
+.mfe-academy .learning-markdown-content code {
   font-family: var(--mono);
   background: var(--learning-bg-hover);
   padding: 2px 6px;
@@ -1678,7 +1678,7 @@ body {
   color: var(--learning-teal);
 }
 
-.app-layout .learning-markdown-content pre {
+.mfe-academy .learning-markdown-content pre {
   margin-top: var(--learning-space-lg);
   margin-bottom: var(--learning-space-lg);
   padding: var(--learning-space-lg);
@@ -1690,13 +1690,13 @@ body {
   border: 1px solid var(--learning-border);
 }
 
-.app-layout .learning-markdown-content pre code {
+.mfe-academy .learning-markdown-content pre code {
   background: none;
   padding: 0;
   color: var(--learning-text);
 }
 
-.app-layout .learning-markdown-content img {
+.mfe-academy .learning-markdown-content img {
   max-width: 100%;
   height: auto;
   margin-top: var(--learning-space-lg);
@@ -1705,7 +1705,7 @@ body {
   border: 1px solid var(--learning-border);
 }
 
-.app-layout .learning-markdown-content table {
+.mfe-academy .learning-markdown-content table {
   display: block;
   max-width: 100%;
   margin-block: 1.5em;
@@ -1718,39 +1718,39 @@ body {
   overflow-x: auto;
 }
 
-.app-layout .learning-markdown-content table th,
-.app-layout .learning-markdown-content table td {
+.mfe-academy .learning-markdown-content table th,
+.mfe-academy .learning-markdown-content table td {
   padding: var(--learning-space-md);
   text-align: left;
   border-bottom: 1px solid var(--learning-border);
 }
 
-.app-layout .learning-markdown-content table th {
+.mfe-academy .learning-markdown-content table th {
   background: var(--learning-bg-hover);
   font-weight: 600;
 }
 
-.app-layout .learning-markdown-content table tbody tr:nth-child(even) {
+.mfe-academy .learning-markdown-content table tbody tr:nth-child(even) {
   background: var(--learning-bg-hover);
 }
 
-.app-layout .learning-components {
+.mfe-academy .learning-components {
   margin-top: var(--learning-space-2xl);
   padding-top: var(--learning-space-2xl);
   border-top: 1px solid var(--learning-border);
 }
 
-.app-layout .learning-component-section {
+.mfe-academy .learning-component-section {
   min-width: 0;
 }
 
-.app-layout .learning-loading {
+.mfe-academy .learning-loading {
   padding: var(--learning-space-2xl);
   text-align: center;
   color: var(--learning-text-muted);
 }
 
-.app-layout .learning-error {
+.mfe-academy .learning-error {
   padding: var(--learning-space-2xl);
   background: #fef8f8;
   border: 1px solid #fecaca;
@@ -1759,7 +1759,7 @@ body {
   font-weight: 500;
 }
 
-.app-layout .learning-content-image {
+.mfe-academy .learning-content-image {
   max-width: 100%;
   height: auto;
   margin-top: var(--learning-space-lg);
@@ -1768,20 +1768,232 @@ body {
   border: 1px solid var(--learning-border);
 }
 
-.app-layout .learning-callout--info {
+.mfe-academy .learning-callout--info {
   background: #f0f8ff;
   border-left: 4px solid #0284c7;
   color: #0c2340;
 }
 
-.app-layout .learning-callout--warning {
+.mfe-academy .learning-callout--warning {
   background: #fffbf0;
   border-left: 4px solid #f59e0b;
   color: #7c2d12;
 }
 
-.app-layout .learning-callout--success {
+.mfe-academy .learning-callout--success {
   background: #f0fdf4;
   border-left: 4px solid #10b981;
   color: #065f46;
+}
+
+.mfe-academy .mfe-academy-topbar-brand:focus-visible {
+  outline: 2px solid var(--learning-primary);
+  outline-offset: 2px;
+}
+
+.mfe-academy .learning-cards,
+.mfe-academy .learning-continued {
+  display: grid;
+  gap: var(--learning-space-2xl);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.mfe-academy .learning-card:hover {
+  border-color: var(--learning-primary);
+  box-shadow: var(--learning-shadow);
+}
+
+.mfe-academy .learning-card-eyebrow {
+  color: var(--learning-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.mfe-academy .learning-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: var(--learning-bg-hover);
+  border-radius: var(--learning-radius-full);
+  overflow: hidden;
+}
+
+.mfe-academy .learning-progress-bar-fill {
+  height: 100%;
+  background: var(--learning-primary);
+  border-radius: var(--learning-radius-full);
+  transition: width 0.3s ease;
+}
+
+.mfe-academy .learning-link:hover {
+  text-decoration: underline;
+}
+
+.mfe-academy .learning-lesson-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--learning-space-2xl);
+  margin-bottom: var(--learning-space-5xl);
+}
+
+.mfe-academy .learning-lesson-header-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.mfe-academy .learning-lesson-title {
+  font-size: var(--learning-text-2xl);
+  font-weight: 700;
+  line-height: var(--learning-leading-tight);
+  margin-bottom: var(--learning-space-md);
+}
+
+.mfe-academy .learning-lesson-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--learning-space-lg);
+  font-size: var(--learning-text-sm);
+  color: var(--learning-text-muted);
+}
+
+.mfe-academy .learning-lesson-controls {
+  display: flex;
+  gap: var(--learning-space-md);
+}
+
+.mfe-academy .learning-content-block {
+  margin-bottom: var(--learning-space-5xl);
+}
+
+.mfe-academy .learning-content-text {
+  display: grid;
+  gap: var(--learning-space-md);
+}
+
+.mfe-academy .learning-content-text h2 {
+  font-size: var(--learning-text-xl);
+  margin-top: var(--learning-space-2xl);
+}
+
+.mfe-academy .learning-content-text h3 {
+  font-size: var(--learning-text-lg);
+}
+
+.mfe-academy .learning-content-text p {
+  line-height: var(--learning-leading-relaxed);
+}
+
+.mfe-academy .learning-content-callout {
+  padding: var(--learning-space-2xl);
+  border-left: 4px solid var(--learning-teal);
+  background: #f0fdfb;
+  border-radius: 0 var(--learning-radius-md) var(--learning-radius-md) 0;
+}
+
+.mfe-academy .learning-content-callout-title {
+  font-weight: 600;
+  color: var(--learning-teal);
+  margin-bottom: var(--learning-space-sm);
+}
+
+.mfe-academy .learning-content-callout-text {
+  color: var(--learning-text);
+  line-height: var(--learning-leading-relaxed);
+}
+
+.mfe-academy .learning-content-quiz {
+  display: grid;
+  gap: var(--learning-space-2xl);
+  padding: var(--learning-space-2xl);
+  border: 1px solid var(--learning-border);
+  border-radius: var(--learning-radius-lg);
+  background: var(--learning-bg-light);
+}
+
+.mfe-academy .learning-quiz-question {
+  font-weight: 600;
+  margin-bottom: var(--learning-space-md);
+}
+
+.mfe-academy .learning-quiz-options {
+  display: grid;
+  gap: var(--learning-space-md);
+}
+
+.mfe-academy .learning-quiz-option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--learning-space-md);
+  padding: var(--learning-space-md) var(--learning-space-lg);
+  border: 1px solid var(--learning-border);
+  border-radius: var(--learning-radius-md);
+  background: var(--learning-bg);
+  cursor: pointer;
+  transition: var(--learning-transition);
+}
+
+.mfe-academy .learning-quiz-option:hover {
+  border-color: var(--learning-primary);
+  background: var(--learning-bg-hover);
+}
+
+.mfe-academy .learning-quiz-option input {
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.mfe-academy .learning-quiz-option label {
+  cursor: pointer;
+  flex: 1;
+}
+
+.mfe-academy .learning-lesson-actions {
+  display: flex;
+  gap: var(--learning-space-md);
+  margin-top: var(--learning-space-5xl);
+}
+
+.mfe-academy .learning-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--learning-space-sm);
+  padding: var(--learning-space-md) var(--learning-space-2xl);
+  border: 1px solid transparent;
+  border-radius: var(--learning-radius-md);
+  font-size: var(--learning-text-sm);
+  font-weight: 600;
+  transition: var(--learning-transition);
+  cursor: pointer;
+}
+
+.mfe-academy .learning-btn--primary {
+  background: var(--learning-primary);
+  color: white;
+}
+
+.mfe-academy .learning-btn--primary:hover {
+  background: #1a76b8;
+}
+
+.mfe-academy .learning-btn--secondary {
+  background: var(--learning-bg-hover);
+  color: var(--learning-text);
+  border-color: var(--learning-border);
+}
+
+.mfe-academy .learning-btn--secondary:hover {
+  border-color: var(--learning-primary);
+}
+
+.mfe-academy .learning-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mfe-academy .mfe-academy-settings-option input {
+  cursor: pointer;
 }
