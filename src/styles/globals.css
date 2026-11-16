@@ -236,6 +236,12 @@
   background: var(--learning-bg-light);
 }
 
+.mfe-academy .mfe-academy-main-content > main.mfe-academy-main--full-width {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* Topbar Header */
 .mfe-academy .mfe-academy-topbar {
   min-height: 72px;
